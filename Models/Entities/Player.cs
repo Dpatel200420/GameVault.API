@@ -11,7 +11,7 @@
         public int GamesPlayed { get; set; } = 0;
         public int GamesWon { get; set; } = 0;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
         public ICollection<MatchParticipant> MatchParticipants { get; set; }
            = new List<MatchParticipant>();
     }
