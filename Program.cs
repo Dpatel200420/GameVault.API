@@ -18,10 +18,13 @@ builder.Services.AddDbContext<GameVaultDbContext>(options =>
 
 // Repositories
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
+builder.Services.AddScoped<IMatchRepository, MatchRepository>();
 
-// Services 
+// Services
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPlayerService, PlayerService>();
+builder.Services.AddScoped<IMatchService, MatchService>();
+builder.Services.AddScoped<ILeaderboardService, LeaderboardService>();
 
 // JWT Authentication
 var jwtSecret = builder.Configuration["Jwt:Secret"]!;
